@@ -116,3 +116,11 @@ setupLanguageFeatures(LanguageIdEnum.IMPALA, {
 	},
 	preprocessCode
 });
+
+setupLanguageFeatures(LanguageIdEnum.SQLITE, {
+	completionItems: {
+		enable: true,
+		completionService
+	},
+	preprocessCode
+});

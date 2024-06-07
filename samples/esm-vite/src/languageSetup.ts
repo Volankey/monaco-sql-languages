@@ -7,6 +7,7 @@ import 'monaco-sql-languages/esm/languages/hive/hive.contribution';
 import 'monaco-sql-languages/esm/languages/trino/trino.contribution';
 import 'monaco-sql-languages/esm/languages/pgsql/pgsql.contribution';
 import 'monaco-sql-languages/esm/languages/impala/impala.contribution';
+import 'monaco-sql-languages/esm/languages/sqlite/sqlite.contribution';
 
 // import 'monaco-sql-languages/esm/all.contributions';
 
@@ -19,6 +20,7 @@ import PGSQLWorker from 'monaco-sql-languages/esm/languages/pgsql/pgsql.worker?w
 import MySQLWorker from 'monaco-sql-languages/esm/languages/mysql/mysql.worker?worker';
 import TrinoSQLWorker from 'monaco-sql-languages/esm/languages/trino/trino.worker?worker';
 import ImpalaSQLWorker from 'monaco-sql-languages/esm/languages/impala/impala.worker?worker';
+import SQLiteWorker from 'monaco-sql-languages/esm/languages/sqlite/sqlite.worker?worker';
 
 /** define MonacoEnvironment.getWorker  */
 (globalThis as any).MonacoEnvironment = {
@@ -43,6 +45,10 @@ import ImpalaSQLWorker from 'monaco-sql-languages/esm/languages/impala/impala.wo
 		}
 		if (label === LanguageIdEnum.IMPALA) {
 			return new ImpalaSQLWorker();
+		}
+		console.log(SQLiteWorker)
+		if (label === LanguageIdEnum.SQLITE) {
+			return new SQLiteWorker();
 		}
 		return new EditorWorker();
 	}

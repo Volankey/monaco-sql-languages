@@ -6,7 +6,7 @@ import './languageSetup.ts';
 const App = () => {
 	const hostRef = useRef<HTMLDivElement>(null);
 	const editorRef = useRef<monaco.editor.IStandaloneCodeEditor>();
-	const [lang, setLang] = useState<string>(LanguageIdEnum.FLINK);
+	const [lang, setLang] = useState<string>(LanguageIdEnum.SQLITE);
 
 	useEffect(() => {
 		if (hostRef.current && !editorRef.current) {
@@ -19,6 +19,7 @@ const App = () => {
 	useEffect(() => {
 		const model = editorRef.current?.getModel();
 		if (model && model.getLanguageId() !== lang) {
+			console.log('changing language to: ', lang);
 			monaco.editor.setModelLanguage(model, lang);
 			setTimeout(() => {
 				console.log(
@@ -66,6 +67,9 @@ const App = () => {
 					</option>
 					<option value={LanguageIdEnum.PG}>
 						{LanguageIdEnum.PG.toLocaleUpperCase()}
+					</option>
+					<option value={LanguageIdEnum.SQLITE}>
+						{LanguageIdEnum.SQLITE.toLocaleUpperCase()}
 					</option>
 				</select>
 			</div>

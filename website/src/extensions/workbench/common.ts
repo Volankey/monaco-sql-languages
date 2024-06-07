@@ -5,7 +5,8 @@ export const languages = [
 	'MySQL',
 	'PGSQL',
 	'TrinoSQL',
-	'ImpalaSQL'
+	'ImpalaSQL',
+	'SQLITE'
 ];
 
 export const defaultLanguage = languages[0];

@@ -26,7 +26,6 @@ export const completionService: CompletionService = async function (
 	const getDBOrSchema = namedSchemaSQLType(languageId) ? getSchemas : getDataBases;
 
 	const { keywords, syntax } = suggestions;
-
 	const keywordsCompletionItems: ICompletionItem[] = keywords.map((kw) => ({
 		label: kw,
 		kind: languages.CompletionItemKind.Keyword,
