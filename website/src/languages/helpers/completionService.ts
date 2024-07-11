@@ -18,10 +18,19 @@ export const completionService: CompletionService = async function (
 	_completionContext,
 	suggestions
 ) {
+	console.log('completionService', model, _position, _completionContext, suggestions);
 	if (!suggestions) {
 		return Promise.resolve([]);
 	}
 	const languageId = model.getLanguageId();
+	if(languageId === 'mongo'){
+		const { keywords, syntax } = suggestions;
+		for (let i = 0; i < syntax.length; i++) {
+			const { syntaxContextType, wordRanges } = syntax[i];
+			console.log(syntaxContextType, wordRanges);
+		}
+		return []
+	}
 	const haveCatalog = haveCatalogSQLType(languageId);
 	const getDBOrSchema = namedSchemaSQLType(languageId) ? getSchemas : getDataBases;
 

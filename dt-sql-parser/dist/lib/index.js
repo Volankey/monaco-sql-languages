@@ -14,3 +14,5 @@ export { ImpalaSqlParserListener } from './impala/ImpalaSqlParserListener';
 export { ImpalaSqlParserVisitor } from './impala/ImpalaSqlParserVisitor';
 export { SQLiteParserListener } from './sqlite/SQLiteParserListener';
 export { SQLiteParserVisitor } from './sqlite/SQLiteParserVisitor';
+export { mongoListener as MongoParserListener } from './mongo/mongoListener';
+export { mongoVisitor as MongoParserVisitor } from './mongo/mongoVisitor';

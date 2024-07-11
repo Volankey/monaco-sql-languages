@@ -121,6 +121,7 @@ export default class Sidebar extends React.Component {
 		molecule.panel.cleanOutput();
 
 		this.languageService.parserTreeToString(this.language, sql).then((res) => {
+			console.log('res:', res);
 			const pre = res?.replace(/(\(|\))/g, '$1\n');
 			const format = new lips.Formatter(pre);
 			const formatted = format.format({

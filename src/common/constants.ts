@@ -38,5 +38,6 @@ export enum LanguageIdEnum {
 	SPARK = 'sparksql',
 	TRINO = 'trinosql',
 	IMPALA = 'impalasql',
-	SQLITE = 'sqlite'
+	SQLITE = 'sqlite',
+	MONGO = 'mongo'
 }

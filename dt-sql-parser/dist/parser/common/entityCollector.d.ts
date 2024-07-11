@@ -13,7 +13,13 @@ export declare enum StmtContextType {
     CREATE_VIEW_STMT = "createViewStmt",
     SELECT_STMT = "selectStmt",
     INSERT_STMT = "insertStmt",
-    CREATE_FUNCTION_STMT = "createFunctionStmt"
+    CREATE_FUNCTION_STMT = "createFunctionStmt",
+    COLLECTION = "collection",
+    COMMANDS = "commands",
+    COMMAND = "command",
+    ARGUMENTS = "arguments",
+    DB_FUNCTION_CALL = "dbFunctionCall",
+    COLLECTION_FUNCTION_CALL = "collectionFunctionCall"
 }
 export interface StmtContext {
     readonly stmtContextType: StmtContextType;

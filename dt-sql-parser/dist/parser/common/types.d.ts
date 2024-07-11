@@ -41,7 +41,18 @@ export declare enum EntityContextType {
     /** column name */
     COLUMN = "column",
     /** column name that will be created */
-    COLUMN_CREATE = "columnCreate"
+    COLUMN_CREATE = "columnCreate",
+    /** collection name */
+    COLLECTION = "collection",
+    /** collection name that will be created */
+    COLLECTION_CREATE = "collectionCreate",
+    /** command name */
+    COMMANDS = "commands",
+    ARGUMENTS = "arguments",
+    PROPERTY_NAME = "propertyName",
+    PROPERTY_VAL = "propertyValue",
+    DB_FUNCTION_CALL = "dbFunctionCall",
+    COLLECTION_FUNCTION_CALL = "collectionFunctionCall"
 }
 /**
  * Suggested information analyzed from the input

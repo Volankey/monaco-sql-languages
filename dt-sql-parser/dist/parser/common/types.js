@@ -31,4 +31,16 @@ export var EntityContextType;
     EntityContextType["COLUMN"] = "column";
     /** column name that will be created */
     EntityContextType["COLUMN_CREATE"] = "columnCreate";
+    // mongo db
+    /** collection name */
+    EntityContextType["COLLECTION"] = "collection";
+    /** collection name that will be created */
+    EntityContextType["COLLECTION_CREATE"] = "collectionCreate";
+    /** command name */
+    EntityContextType["COMMANDS"] = "commands";
+    EntityContextType["ARGUMENTS"] = "arguments";
+    EntityContextType["PROPERTY_NAME"] = "propertyName";
+    EntityContextType["PROPERTY_VAL"] = "propertyValue";
+    EntityContextType["DB_FUNCTION_CALL"] = "dbFunctionCall";
+    EntityContextType["COLLECTION_FUNCTION_CALL"] = "collectionFunctionCall";
 })(EntityContextType || (EntityContextType = {}));

@@ -124,3 +124,12 @@ setupLanguageFeatures(LanguageIdEnum.SQLITE, {
 	},
 	preprocessCode
 });
+
+
+setupLanguageFeatures(LanguageIdEnum.MONGO, {
+	completionItems: {
+		enable: true,
+		completionService
+	},
+	preprocessCode
+});

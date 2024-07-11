@@ -10,6 +10,7 @@ import MySQLWorker from 'monaco-sql-languages/esm/languages/mysql/mysql.worker?w
 import TrinoSQLWorker from 'monaco-sql-languages/esm/languages/trino/trino.worker?worker';
 import ImpalaSQLWorker from 'monaco-sql-languages/esm/languages/impala/impala.worker?worker';
 import SQLiteWorker from 'monaco-sql-languages/esm/languages/sqlite/sqlite.worker?worker';
+import MongoWorker from 'monaco-sql-languages/esm/languages/mongo/mongo.worker?worker';
 
 (globalThis as any).MonacoEnvironment = {
 	getWorker(_: any, label: string) {
@@ -36,6 +37,9 @@ import SQLiteWorker from 'monaco-sql-languages/esm/languages/sqlite/sqlite.worke
 		}
 		if (label === LanguageIdEnum.SQLITE) {
 			return new SQLiteWorker();
+		}
+		if (label === LanguageIdEnum.MONGO) {
+			return new MongoWorker();
 		}
 		return new EditorWorker();
 	}

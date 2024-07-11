@@ -6,10 +6,11 @@ export const languages = [
 	'PGSQL',
 	'TrinoSQL',
 	'ImpalaSQL',
-	'SQLITE'
+	'SQLITE',
+	'Mongo'
 ];
 
-export const defaultLanguage = languages[0];
+export const defaultLanguage = 'Mongo';
 
 export const defaultEditorTab = {
 	id: `fixedTab`,

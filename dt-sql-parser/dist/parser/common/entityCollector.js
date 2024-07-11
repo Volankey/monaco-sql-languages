@@ -26,6 +26,13 @@ export var StmtContextType;
     StmtContextType["SELECT_STMT"] = "selectStmt";
     StmtContextType["INSERT_STMT"] = "insertStmt";
     StmtContextType["CREATE_FUNCTION_STMT"] = "createFunctionStmt";
+    // mongo
+    StmtContextType["COLLECTION"] = "collection";
+    StmtContextType["COMMANDS"] = "commands";
+    StmtContextType["COMMAND"] = "command";
+    StmtContextType["ARGUMENTS"] = "arguments";
+    StmtContextType["DB_FUNCTION_CALL"] = "dbFunctionCall";
+    StmtContextType["COLLECTION_FUNCTION_CALL"] = "collectionFunctionCall";
 })(StmtContextType || (StmtContextType = {}));
 export function toStmtContext(ctx, type, input, rootStmt, parentStmt, isContainCaret) {
     const text = ctxToText(ctx, input);
