@@ -7,3 +7,4 @@ export { TrinoSQL } from './trino';
 export { ImpalaSQL } from './impala';
 export { Mongo } from './mongo';
 export { SQLite } from './sqlite';
+export { DuckDB } from './duckdb';

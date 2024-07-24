@@ -9,4 +9,4 @@ export default class JavaScriptParserBase extends antlr4.Parser {
     closeBrace(): boolean;
     lineTerminatorAhead(): boolean;
 }
-import * as antlr4 from "antlr4ng";
+import * as antlr4 from 'antlr4ng';

@@ -1,5 +1,5 @@
 import { worker } from '../../fillers/monaco-editor-core';
-import { PostgreSQL } from 'dt-sql-parser/dist/parser/postgresql';
+import { PostgreSQL } from '@volankey/dt-sql-parser/dist/parser/postgresql';
 import { BaseSQLWorker, ICreateData } from '../../baseSQLWorker';
 
 export class PgSQLWorker extends BaseSQLWorker {

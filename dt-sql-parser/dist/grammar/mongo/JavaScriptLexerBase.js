@@ -1,4 +1,4 @@
-import * as antlr4 from "antlr4ng";
+import * as antlr4 from 'antlr4ng';
 import { MongoLexer } from './MongoLexer.js';
 export default class JavaScriptLexerBase extends antlr4.Lexer {
     constructor(input) {
@@ -21,7 +21,8 @@ export default class JavaScriptLexerBase extends antlr4.Lexer {
         return this.useStrictCurrent;
     }
     IsInTemplateString() {
-        return this.templateDepthStack.length > 0 && this.templateDepthStack[this.templateDepthStack.length - 1] === this.currentDepth;
+        return (this.templateDepthStack.length > 0 &&
+            this.templateDepthStack[this.templateDepthStack.length - 1] === this.currentDepth);
     }
     getCurrentToken() {
         return this.nextToken();
@@ -36,21 +37,19 @@ export default class JavaScriptLexerBase extends antlr4.Lexer {
     ProcessOpenBrace() {
         this.currentDepth++;
         this.useStrictCurrent =
-            this.scopeStrictModes.length > 0 && this.scopeStrictModes[this.scopeStrictModes.length - 1]
+            this.scopeStrictModes.length > 0 &&
+                this.scopeStrictModes[this.scopeStrictModes.length - 1]
                 ? true
                 : this.useStrictDefault;
         this.scopeStrictModes.push(this.useStrictCurrent);
     }
     ProcessCloseBrace() {
         this.useStrictCurrent =
-            this.scopeStrictModes.length > 0
-                ? this.scopeStrictModes.pop()
-                : this.useStrictDefault;
+            this.scopeStrictModes.length > 0 ? this.scopeStrictModes.pop() : this.useStrictDefault;
         this.currentDepth--;
     }
     ProcessStringLiteral() {
-        if (this.lastToken === null ||
-            this.lastToken.type === MongoParser.OpenBrace) {
+        if (this.lastToken === null || this.lastToken.type === MongoParser.OpenBrace) {
             if (super.text === '"use strict"' || super.text === "'use strict'") {
                 if (this.scopeStrictModes.length > 0) {
                     this.scopeStrictModes.pop();

@@ -7,4 +7,5 @@ import './languages/pgsql/pgsql.contribution';
 import './languages/impala/impala.contribution';
 import './languages/sqlite/sqlite.contribution';
 import './languages/mongo/mongo.contribution';
+import './languages/duckdb/duckdb.contribution';
 

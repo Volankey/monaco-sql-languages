@@ -1,5 +1,5 @@
 import { worker } from '../../fillers/monaco-editor-core';
-import { TrinoSQL } from 'dt-sql-parser/dist/parser/trino';
+import { TrinoSQL } from '@volankey/dt-sql-parser/dist/parser/trino';
 import { BaseSQLWorker, ICreateData } from '../../baseSQLWorker';
 
 export class TrinoSQLWorker extends BaseSQLWorker {

@@ -1,5 +1,5 @@
 import { worker } from '../../fillers/monaco-editor-core';
-import { SQLite } from 'dt-sql-parser/dist/parser/sqlite';
+import { SQLite } from '@volankey/dt-sql-parser/dist/parser/sqlite';
 import { BaseSQLWorker, ICreateData } from '../../baseSQLWorker';
 
 export class SQLiteWorker extends BaseSQLWorker {

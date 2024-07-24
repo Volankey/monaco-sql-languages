@@ -1,4 +1,4 @@
-import * as antlr4 from "antlr4ng";
+import * as antlr4 from 'antlr4ng';
 import { MongoParser } from './MongoParser';
 export default class JavaScriptParserBase extends antlr4.Parser {
     constructor(input) {
@@ -23,8 +23,7 @@ export default class JavaScriptParserBase extends antlr4.Parser {
     }
     notOpenBraceAndNotFunction() {
         const nextTokenType = this._input.LT(1).type;
-        return (nextTokenType !== MongoParser.OpenBrace &&
-            nextTokenType !== MongoParser.Function_);
+        return nextTokenType !== MongoParser.OpenBrace && nextTokenType !== MongoParser.Function_;
     }
     closeBrace() {
         return this._input.LT(1).type === MongoParser.CloseBrace;
@@ -49,7 +48,7 @@ export default class JavaScriptParserBase extends antlr4.Parser {
         const text = ahead.text;
         const type = ahead.type;
         return ((type === MongoParser.MultiLineComment &&
-            (text.includes("\r") || text.includes("\n"))) ||
+            (text.includes('\r') || text.includes('\n'))) ||
             type === MongoParser.LineTerminator);
     }
 }

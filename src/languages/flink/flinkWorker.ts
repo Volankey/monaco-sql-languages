@@ -1,5 +1,5 @@
 import { worker } from '../../fillers/monaco-editor-core';
-import { FlinkSQL } from 'dt-sql-parser/dist/parser/flink';
+import { FlinkSQL } from '@volankey/dt-sql-parser/dist/parser/flink';
 import { BaseSQLWorker, ICreateData } from '../../baseSQLWorker';
 
 export class FLinkSQLWorker extends BaseSQLWorker {

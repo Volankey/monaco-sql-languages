@@ -1,5 +1,5 @@
 import { worker } from '../../fillers/monaco-editor-core';
-import { Mongo } from 'dt-sql-parser/dist/parser/mongo';
+import { Mongo } from '@volankey/dt-sql-parser/dist/parser/mongo';
 import { BaseSQLWorker, ICreateData } from '../../baseSQLWorker';
 
 export class MongoWorker extends BaseSQLWorker {

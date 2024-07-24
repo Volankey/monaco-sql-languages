@@ -1,5 +1,5 @@
 import { worker } from '../../fillers/monaco-editor-core';
-import { HiveSQL } from 'dt-sql-parser/dist/parser/hive';
+import { HiveSQL } from '@volankey/dt-sql-parser/dist/parser/hive';
 import { BaseSQLWorker, ICreateData } from '../../baseSQLWorker';
 
 export class HiveSQLWorker extends BaseSQLWorker {

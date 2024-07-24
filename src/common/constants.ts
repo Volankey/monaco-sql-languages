@@ -39,5 +39,6 @@ export enum LanguageIdEnum {
 	TRINO = 'trinosql',
 	IMPALA = 'impalasql',
 	SQLITE = 'sqlite',
-	MONGO = 'mongo'
+	MONGO = 'mongo',
+	DUCKDB = 'duckdb',
 }

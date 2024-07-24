@@ -62,7 +62,6 @@ export class Mongo extends BasicSQL {
                     syntaxContextType = EntityContextType.COLLECTION;
                     break;
                 }
-
                 default:
                     break;
             }

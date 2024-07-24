@@ -20,4 +20,4 @@ export default class JavaScriptLexerBase extends antlr4.Lexer {
     IsStartOfFile(): boolean;
     reset(): void;
 }
-import * as antlr4 from "antlr4ng";
+import * as antlr4 from 'antlr4ng';

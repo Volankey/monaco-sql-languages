@@ -1,5 +1,5 @@
 import { worker } from '../../fillers/monaco-editor-core';
-import { SparkSQL } from 'dt-sql-parser/dist/parser/spark';
+import { SparkSQL } from '@volankey/dt-sql-parser/dist/parser/spark';
 import { BaseSQLWorker, ICreateData } from '../../baseSQLWorker';
 
 export class SparkSQLWorker extends BaseSQLWorker {

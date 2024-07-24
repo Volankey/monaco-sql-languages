@@ -1,6 +1,6 @@
 {
-	"name": "monaco-sql-languages",
-	"version": "0.12.0",
+	"name": "@volankey/monaco-sql-languages",
+	"version": "0.12.4",
 	"description": "SQL languages for the Monaco Editor, based on monaco-languages.",
 	"scripts": {
 		"build": "mrmdir ./esm && tsc -p ./tsconfig.esm.json",
@@ -61,7 +61,7 @@
 		}
 	},
 	"dependencies": {
-		"dt-sql-parser": "link:dt-sql-parser",
+		"@volankey/dt-sql-parser": "4.0.3",
     "antlr4-c3": "3.3.7",
     "antlr4ng": "2.0.11"
 	},

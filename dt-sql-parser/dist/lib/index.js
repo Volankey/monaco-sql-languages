@@ -16,3 +16,5 @@ export { SQLiteParserListener } from './sqlite/SQLiteParserListener';
 export { SQLiteParserVisitor } from './sqlite/SQLiteParserVisitor';
 export { mongoListener as MongoParserListener } from './mongo/mongoListener';
 export { mongoVisitor as MongoParserVisitor } from './mongo/mongoVisitor';
+export { DuckDBParserListener } from './duckdb/DuckDBParserListener';
+export { DuckDBParserVisitor } from './duckdb/DuckDBParserVisitor';

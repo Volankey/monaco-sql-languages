@@ -1,5 +1,5 @@
 import { languages, Emitter, IEvent, editor, Position, IRange } from './fillers/monaco-editor-core';
-import { EntityContext, Suggestions } from 'dt-sql-parser';
+import { EntityContext, Suggestions } from '@volankey/dt-sql-parser';
 
 /**
  * A completion item.
