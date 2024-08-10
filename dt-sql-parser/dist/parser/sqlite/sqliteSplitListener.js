@@ -1,6 +1,6 @@
 import { SplitListener } from '../common/splitListener';
 export class SQLiteSplitListener extends SplitListener {
-    exitSingleStatement(ctx) {
+    exitSingleStmt(ctx) {
         this._statementsContext.push(ctx);
     }
 }

@@ -211,8 +211,8 @@ export const language = <languages.IMonarchLanguage>{
 			{ include: '@complexOperators' },
 			{ include: '@numbers' },
 
-			[/[{}()\[\]]/, '@brackets'],
-			[/[<>](?!@symbols)/, '@brackets'],
+			[/[\(\)\[\]\{\}]/, '@brackets'],
+
 			[/[;,.]/, TokenClassConsts.DELIMITER],
 			// identifiers and keywords
 			[
